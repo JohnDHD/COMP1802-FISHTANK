@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Hồ Cá </title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="./assets/style/stylefish.css">
+</head>
+<body>
+<div id="container" style="width:100%; height: 100vh; background-image: url('./assets/image/bg1.jpg');background-size:cover ;background-repeat: no-repeat;background-position:center;">
+    <div id="shark"><img src="./assets/image/shark.gif"; width="500" height="200"></div>
+	<div id="nemo"><img src="./assets/image/nemo.gif" alt="" ></div>
+	<div id="bachtuot"><img src="./assets/image/octopus.gif" alt=""></div>
+	<div id="Ariel"><img src="./assets/image/tiên cá.gif" alt="" width="350" height="250"></div>
+	<div id="rongbien2"><img src="./assets/image/rong bien 2.gif",width="100": height="250" atl=""></div>
+	<div id="rongbien3"><img src="./assets/image/rong bien 3.gif"; height="400" atl=""></div>
+	<div id="rongbien4"><img src="./assets/image/rong bien 4.gif" ; height="300" atl=""></div>
+	<div id="rongbien5"><img src="./assets/image/rong bien 5.gif" ; height="300" atl=""></div>
+	<div id="botbien1"><img src="./assets/image/bọt biển.gif": height="700" atl=""></div>
+	<div id="botbien2"><img src="./assets/image/bọt biển.gif": height="700" atl=""></div>
+	<div id="botbien3"><img src="./assets/image/bọt biển.gif": height="700" atl=""></div>
+	<div id="saobien"><img src="./assets/image/sao biển.gif"; height="170" alt=""></div>
+	<div id="rua" ><img src="./assets/image/rùa.gif" alt=""></div>
+	<div id="rong1"><img src="./assets/image/rong bien 1.gif" alt=""></div>
+	<div id="rongbien6"><img src="./assets/image/rong bien 6.gif" height="300" alt=""></div>
+	<div id="sanho"><img src="./assets/image/sanho.gif" height="200" alt=""></div>
+</div>
+<select id="bgSelect" onchange="myFunction()" style="position: absolute; top: 0;">
+<option value="./assets/image/bg1.jpg">Background 1</option>
+<option value="./assets/image/bg2.jpg">Background 2</option>
+<option value="./assets/image/bg3.jpg">Background 3</option>
+</select>
+<script>
+function myFunction() {
+var e = document.getElementById("bgSelect");
+var strUser = e.options[e.selectedIndex].value;
+document.getElementById("container").style.backgroundImage = "url('" + strUser + "')";
+}
+</script>
+</body>
+</html>
