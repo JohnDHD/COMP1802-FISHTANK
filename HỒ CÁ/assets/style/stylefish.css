@@ -99,25 +99,25 @@
 }
 #rongbien2{
     position: absolute;
-    bottom: 20px;
+    bottom: 0px;
     width: 20px;
     left: 500px ;
 }
 #rongbien3{
     position: absolute;
-    bottom: 20px;
+    bottom: 0px;
     width: 20px;
     right: 400px ;
 }
 #rongbien4{
     position: absolute;
-    bottom: 20px;
+    bottom: 0px;
     width: 20px;
    left: 350px
 }
 #rongbien5{
     position: absolute;
-    bottom: 12px;
+    bottom: 0px;
     width: 20px;
     right: 600px ;}
 #rongbien6{
@@ -128,25 +128,25 @@
 }
 #sanho{
     position: absolute;
-    bottom: 14px;
+    bottom: 0px;
     width: 15px;
     right: 260px ;
 }
 #botbien1{
     position: absolute;
-    bottom: 50px;
+    bottom: 0px;
     width: 20px;
     left: 0px ; 
 }
 #botbien2{
     position: absolute;
-    bottom: 30px;
+    bottom: 0px;
     width: 20px;
     right: 600px ; 
 }
 #botbien3{
     position: absolute;
-    bottom: 50px;
+    bottom: 0px;
     width: 0px;
     right: 1000px ; 
 }
