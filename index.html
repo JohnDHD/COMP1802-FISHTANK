@@ -18,11 +18,12 @@
 }
 
 /*Shark*/
+/*Shark*/
 #shark
 {
 	position: absolute;
 	left:100px; top:400px;
-	width: 200px; height: 147px;
+	width: 100px; height: 147px;
 	/* Tên của animation */
 	animation-name: Shark;
 	/* Thời gian thực hiện animation */
@@ -32,31 +33,59 @@
 	animation-iteration-count:infinite;
 	/* Trạng thái */
 	animation-play-state: running;	
-	transform:scaleX(-1)
+	transform:scaleX(-1);
+	/* Thêm thuộc tính animation-direction */
+	animation-direction:normal;
 }
 @-webkit-keyframes Shark
 {
-	from{left:200px;} to {left: 1300px;}
+	0% {left:100px; transform:scaleX(-1);}
+	40% {left:1100px; transform:scaleX(-1);}
+    45% {transform:scaleX(1);}
+	85% {left:100px; transform:scaleX(1);}
+    90% {transform:scaleX(-1);}
+    100% {left:100px; transform:scaleX(-1);}
 }
+
 /*nemo*/
 #nemo{
     position: absolute;
     top: 0px;
     width: 150px;
     transform: scaleX(-1);
-    animation: nemo 15s ease-in-out 0s infinite;
+    animation: nemo 20s ease-in-out 0s infinite;
 }
 #nemo img{
     width: 50%;
     height: 50px;
 }
 @keyframes nemo{
-    0%{top:0px;right: 0px;}
+    0%{top:50px;right: 0px;}
     20%{top:100px;right: 60px;}
-    40%{top:0px;right: 500px;}
-    60%{top:0px;right: 700px;}
+    40%{top:200px;right: 500px;}
+    60%{top:300px;right: 700px;}
     80%{top:150px;right: 800px;}
-    100%{top:0px;right: 1400px;}
+    100%{top:50px;right: 1400px;}
+}
+#nemo-1{
+    position: absolute;
+    top: 0px;
+    width: 120px;
+    height: 80px;
+    transform: scaleX(-1);
+    animation: nemo-1 20s ease-in-out 0s infinite;
+}
+#nemo-1 img{
+    width: 50%;
+    height: 50px;
+}
+@keyframes nemo-1{
+    0%{top:80px;right: 100px;}
+    20%{top:100px;right: 200px;}
+    40%{top:140px;right: 300px;}
+    60%{top:180px;right: 800px;}
+    80%{top:150px;right: 1000px;}
+    100%{top:200px;right: 1400px;}
 }
 /*Octopus*/
 #bachtuot{
@@ -64,18 +93,18 @@
     /* top: 0px; */
     left: 20%;
     width: 150px;
-    animation: bachtuot 10s ease-in-out 0s infinite;
+    animation: bachtuot 20s ease-in-out 0s infinite;
     
 }
 #bachtuot img {
     width: 100%;
 }
 @keyframes bachtuot{
-    0%{bottom: 0%;}
+    0%{bottom: 10%;}
     20%{bottom: 20%;}
     40%{bottom: 40%;}
-    60%{bottom: 50%;}
-    80%{bottom: 60%;}
+    60%{bottom: 60%;}
+    80%{bottom: 80%;}
     100%{bottom: 90%;}
 }
 /*Ariel the mermaid*/
@@ -95,73 +124,21 @@
 	transform:scaleX(-1)
 }
 @-webkit-keyframes Ariel {
-    0%   {left:100px; top:400px;}
-	10%  {left:100px; top:300px;rotate: -25deg;}
-	20%  {left:500px; top:250px; rotate: -20deg;}
-	40%  {left:600px; top:200px; rotate: 0deg;}
-	60%  {left:700px; top:100px;rotate: 50deg;}
-    80%  {left:800px; top:400px;rotate: 0deg;}
-    90%  {left:900px; top:200px;}
-	100% {left:1100px; top:250px;}
+    0%   {left:0px;top:0;}
+	10%  {left:200px; top:200px; rotate: -10deg;}
+	20%  {left:500px; top:300px; rotate: -20deg;}
+	40%  {left:600px; top:200px; rotate: -10deg;}
+	60%  {left:700px; top:100px; rotate: 10deg;}
+    80%  {left:800px; top:300px; rotate: 20deg;}
+    90%  {left:1200px; top:200px;}
+	100% {left:1200px; top:250px;}
+}/*rùa*/
+#rua img{
+    width:150px; 
+    height:150px; 
 }
-#rongbien2{
-    position: absolute;
-    bottom: 0px;
-    width: 20px;
-    left: 500px ;
-}
-#rongbien3{
-    position: absolute;
-    bottom: 0px;
-    width: 20px;
-    right: 400px ;
-}
-#rongbien4{
-    position: absolute;
-    bottom: 0px;
-    width: 20px;
-   left: 350px
-}
-#rongbien5{
-    position: absolute;
-    bottom: 0px;
-    width: 20px;
-    right: 600px ;}
-#rongbien6{
-    position: absolute;
-    bottom: 0px;
-    width: 15px;
-    right: 800px ;
-}
-#sanho{
-    position: absolute;
-    bottom: 0px;
-    width: 15px;
-    right: 260px ;
-}
-#botbien1{
-    position: absolute;
-    bottom: 0px;
-    width: 20px;
-    left: 0px ; 
-}
-#botbien2{
-    position: absolute;
-    bottom: 0px;
-    width: 20px;
-    right: 600px ; 
-}
-#botbien3{
-    position: absolute;
-    bottom: 0px;
-    width: 0px;
-    right: 1000px ; 
-}
-#saobien{
-    position: absolute;
-    right: 300;
-    bottom: 0px;
-    
+@-webkit-keyframes rùa{
+    from{right:0px;} to {right: 1300px;}
 }
 #rua{
     position:absolute ;
@@ -169,7 +146,7 @@
 	/* Tên của animation */
 	animation-name: rùa ;
 	/* Thời gian thực hiện animation */
-	animation-duration: 50s;
+	animation-duration: 70s;
 	/* Kiểu thực hiện animation */
 	animation-timing-function: ease-in-out;
 	animation-iteration-count:infinite ;
@@ -181,58 +158,192 @@
     -webkit-animation: rùa 30s ease-out infinite;
     -o-animation:rùa 25s ease-out infinite;
     transform: scaleX(-1);
-    transform:matrix3d(-1) ;
 }
-#rua img{
-    width:150px; 
-    height:150px; 
+/*ĐỨNG YÊN*/
+#botbien1{
+    position: absolute;
+    bottom: 0px;
+    width: 20px;
+    left: 900px ; 
+    animation-duration: 9ms;
 }
-@-webkit-keyframes rùa{
-    from{right:0px;} to {right: 1300px;}
-}
-#rong1{
-    position:absolute;
-    bottom: 20px;
-    right: 1100px;
-}
+#botbien2{
+    position: absolute;
+    bottom: 0px;
+    width: 20px;
+    right: 1300px ; 
 
+}
+#rongbien1{
+    position: absolute;
+    bottom: 0px;
+    width: 20px;
+    right: 1100px ; 
+}
+#rongbien1-2 {
+    position: absolute;
+    bottom: 0px;
+    width: 20px;
+    right: 1020px ; 
 
+}
+#rongbien1-3 {
+    position: absolute;
+    bottom: 0px;
+    width: 20px;
+    right: 940px ; 
+
+}
+#rongbien1-4 {
+    position: absolute;
+    bottom: 0px;
+    width: 20px;
+    right: 860px ; 
+
+}
+#rongbien1-5 {
+    position: absolute;
+    bottom: 0px;
+    width: 20px;
+    right: 780px ; 
+
+}
+#rongbien1-6 {
+    position: absolute;
+    bottom: 0px;
+    width: 20px;
+    right: 700px ; 
+
+}
+#rongbien1-7 {
+    position: absolute;
+    bottom: 0px;
+    width: 20px;
+    right: 620px ; 
+
+}
+#rongbien4 {
+    position: absolute;
+    bottom: 0px;
+    width: 20px;
+    right: 1550px ; 
+
+}
+#rongbien4-1 {
+    position: absolute;
+    bottom: 0px;
+    width: 20px;
+    right: 180px ; 
+
+}
+#rongbien5 {
+    position: absolute;
+    bottom: 0px;
+    width: 20px;
+    right: 1500px ; 
+
+}
+#rongbien5-1 {
+    position: absolute;
+    bottom: 0px;
+    width: 20px;
+    right: 250px ; 
+
+}
+#rongbien3 {
+    position: absolute;
+    bottom: 0px;
+    width: 20px;
+    right: 400px ; 
+
+}
+#sanho2 {
+    position: absolute;
+    bottom: 0px;
+    width: 0px;
+    right: 1300px ; 
+
+}
+#sanho2-1 {
+    position: absolute;
+    bottom: 0px;
+    width: 0px;
+    right: 1200px ; 
+
+}
+#sanho {
+    position: absolute;
+    bottom: 30px;
+    width: 0px;
+    right: 1280px ; 
+
+}
+#saobien {
+    position: absolute;
+    bottom: 0px;
+    width: 0px;
+    right: 1200px ; 
+
+}
+#saobien-1 {
+    position: absolute;
+    bottom: 0px;
+    width: 0px;
+    right: 300px ; 
+}
+#bgSelect{
+    background-color:#00EFFE;
+}
+#musicSelect{
+    background-color:#00EFFE;
+}
 </style>
 <body>
-<div id="container" style="width:100%; height: 100vh; background-image: url('./assets/image/bg1.jpg');background-size:cover ;background-repeat: no-repeat;background-position:center;">
+<div id="container" style="width:100%; height: 100vh; background-image: url('./assets/image/bg2.jpg');background-size:cover ;background-repeat: no-repeat;background-position:center;">
     <audio autoplay>
 		<source src="./assets/music/y2meta.com - CALL OF SILENT x AKUMA NA KO x AOT __ MIT ft JAPANDEE __ Bản Phối from_T-Libra ♎✨ (128 kbps).mp3" type="audio/mp3">	
 		<source src="./assets/music/y2meta.com - Dean Martin - Welcome to My World (Official Audio) (128 kbps).mp3" type="audio/mp3">
 		<source src=".//assets/music/y2meta.com - Fly Me To The Moon (2008 Remastered) (128 kbps).mp3" type="audio/mp3">
 	</audio>
-	<div id="shark"><img src="./assets/image/shark.gif"; width="500" height="200"></div>
+    <!--CHUYỂN ĐỘNG-->
+	<div id="shark"><img src="./assets/image/shark.gif"; width="400" height="200"></div>
 	<div id="nemo"><img src="./assets/image/nemo.gif" alt="" ></div>
+    <div id="nemo-1"><img src="./assets/image/nemo.gif" alt="" ></div>
 	<div id="bachtuot"><img src="./assets/image/octopus.gif" alt=""></div>
 	<div id="Ariel"><img src="./assets/image/tiên cá.gif" alt="" width="350" height="250"></div>
-	<div id="rongbien2"><img src="./assets/image/rong bien 2.gif",width="100": height="250" atl=""></div>
-	<div id="rongbien3"><img src="./assets/image/rong bien 3.gif"; height="400" atl=""></div>
-	<div id="rongbien4"><img src="./assets/image/rong bien 4.gif" ; height="300" atl=""></div>
-	<div id="rongbien5"><img src="./assets/image/rong bien 5.gif" ; height="300" atl=""></div>
+	<div id="rua" ><img src="./assets/image/rùa.gif" alt=""></div>  
+    <!--ĐỨNG YÊN-->
 	<div id="botbien1"><img src="./assets/image/bọt biển.gif": height="700" atl=""></div>
-	<div id="botbien2"><img src="./assets/image/bọt biển.gif": height="700" atl=""></div>
-	<div id="botbien3"><img src="./assets/image/bọt biển.gif": height="700" atl=""></div>
-	<div id="saobien"><img src="./assets/image/sao biển.gif"; height="170" alt=""></div>
-	<div id="rua" ><img src="./assets/image/rùa.gif" alt=""></div>
-	<div id="rong1"><img src="./assets/image/rong bien 1.gif" alt=""></div>
-	<div id="rongbien6"><img src="./assets/image/rong bien 6.gif" height="300" alt=""></div>
-	<div id="sanho"><img src="./assets/image/sanho.gif" height="200" alt=""></div>
+    <div id="botbien2"><img src="./assets/image/bọt biển.gif": height="700" atl=""></div>
+    <div id="rongbien1"><img src="./assets/image/rong bien 1.gif"; height="300" alt=""></div>
+    <div id="rongbien1-2"><img src="./assets/image/rong bien 1.gif"; height="300" alt=""></div>
+    <div id="rongbien1-3"><img src="./assets/image/rong bien 1.gif"; height="300" alt=""></div>
+    <div id="rongbien1-4"><img src="./assets/image/rong bien 1.gif"; height="300" alt=""></div>
+    <div id="rongbien1-5"><img src="./assets/image/rong bien 1.gif"; height="300" alt=""></div>
+    <div id="rongbien1-6"><img src="./assets/image/rong bien 1.gif"; height="300" alt=""></div>
+    <div id="rongbien1-7"><img src="./assets/image/rong bien 1.gif"; height="300" alt=""></div>
+    <div id="rongbien3"><img src="./assets/image/rong bien 3.gif"; height="300" alt=""></div>
+    <div id="rongbien4"><img src="./assets/image/rong bien 4.gif"; height="300" alt=""></div>
+    <div id="rongbien4-1"><img src="./assets/image/rong bien 4.gif"; height="300" alt=""></div>
+    <div id="rongbien5"><img src="./assets/image/rong bien 5.gif"; height="250" alt=""></div>
+    <div id="rongbien5-1"><img src="./assets/image/rong bien 5.gif"; height="250" alt=""></div>
+    <div id="sanho2"><img src="./assets/image/sanho2.gif"; height="150" alt=""></div>
+    <div id="sanho2-1"><img src="./assets/image/sanho2.gif"; height="150" alt=""></div>
+    <div id="saobien"><img src="./assets/image/saobien.gif"; height="150" alt=""></div>
+    <div id="saobien-1"><img src="./assets/image/saobien.gif"; height="250" alt=""></div>
+    <div id="sanho"><img src="./assets/image/sanho.gif"; height="200" alt=""></div>
 </div>
 <!--Background-->
 <select id="bgSelect" onchange="myFunction()" style="position: absolute; top: 0;">
-<option value="./assets/image/bg1.jpg">Background 1</option>
-<option value="./assets/image/bg2.jpg">Background 2</option>
-<option value="./assets/image/bg3.jpg">Background 3</option>
+<option value="./assets/image/bg2.jpg">BG1</option>
+<option value="./assets/image/bg3.jpg">BG2</option>
+<option value="./assets/image/bg1.jpg">BG3</option>
 </select>
 <!--Music-->
-<select id="musicSelect" onchange="myFunction2()" style="position: absolute;top: 0;left: 110px;">
-	<option value="./assets/music/y2meta.com - CALL OF SILENT x AKUMA NA KO x AOT __ MIT ft JAPANDEE __ Bản Phối from_T-Libra ♎✨ (128 kbps).mp3">Music_1</option>
-	<option value="./assets/music/y2meta.com - MÙA HÈ TUYỆT VỜI (LALAWONDER) - ĐỨC PHÚC x TĂNG DUY TÂN _ OFFICIAL MUSIC VIDEO (128 kbps).mp3">Music_2</option>
-	<option value="./assets/music/y2meta.com - SON TUNG M-TP _ MAKING MY WAY _ OFFICIAL VISUALIZER (128 kbps).mp3">Music_3</option>
+<select id="musicSelect" onchange="myFunction2()" style="position: absolute;top: 0;left: 55px;">
+	<option value="./assets/music/y2meta.com - CALL OF SILENT x AKUMA NA KO x AOT __ MIT ft JAPANDEE __ Bản Phối from_T-Libra ♎✨ (128 kbps).mp3">M1</option>
+	<option value="./assets/music/y2meta.com - MÙA HÈ TUYỆT VỜI (LALAWONDER) - ĐỨC PHÚC x TĂNG DUY TÂN _ OFFICIAL MUSIC VIDEO (128 kbps).mp3">M2</option>
+	<option value="./assets/music/y2meta.com - SON TUNG M-TP _ MAKING MY WAY _ OFFICIAL VISUALIZER (128 kbps).mp3">M3</option>
 </select>
 
 <script>
@@ -250,8 +361,7 @@ function myFunction2() {
     audioElement.src = y;
     audioElement.load();
 }
-
-
 </script>
+
 </body>
 </html>
